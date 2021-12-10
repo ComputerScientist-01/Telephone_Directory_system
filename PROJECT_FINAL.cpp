@@ -22,7 +22,6 @@ public:
     void del();          //function to delete the data
     
     void mod();          //function to modify the data
-
 }c;//object of class Telephone is created as 'c' 
 void Telephone::get() //function to input the data
 {
