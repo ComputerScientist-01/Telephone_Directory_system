@@ -23,16 +23,16 @@ public:
 void Telephone::get() //function to input the data
 {
     puts("\nEnter  first name :");
-    gets(f_name);
+    cin >> f_name;
 
     puts("\nEnter  last name :");
-    gets(l_name);
+    cin >> l_name;
 
     puts("\nEnter phone number:");
-    gets(phone_no);
+    cin >> phone_no;
 
     puts("\nEnter  email address:");
-    gets(email);
+    cin >> email;
 }
 void Telephone::disp() //function to display the data
 {
@@ -74,7 +74,7 @@ void Telephone::search() //function to search the data
     char m[20];
     ifstream ifile("Tele");
     puts("Enter name of Person which has to be searched");
-    gets(m);
+    cin >> m;
     ifile.seekg(0, ios::beg);
     ifile.read((char *)&c, sizeof(c));
     while (ifile)
@@ -93,7 +93,7 @@ void Telephone::del()
     ofstream ofile;
     ofile.open("new", ios::app);
     puts("Enter the name of the Person whose records you want to delete");
-    gets(b);
+    cin >> b;
     ifile.seekg(0, ios::beg);
     ifile.read((char *)&c, sizeof(c));
     while (ifile)
@@ -112,7 +112,7 @@ void Telephone::mod()
     char d[20];
     int p;
     puts("\nEnter name of Person whose record you want to modify\n");
-    gets(d);
+    cin >> d;
     fstream f;
     f.open("Tele", ios::in | ios::out);
     f.seekg(0, ios::beg);
@@ -127,16 +127,16 @@ void Telephone::mod()
             switch (p)
             {
             case 1:
-                gets(f_name);
+                cin >> f_name;
                 break;
             case 2:
-                gets(l_name);
+                cin >> l_name;
                 break;
             case 3:
-                gets(phone_no);
+                cin >> phone_no;
                 break;
             case 4:
-                gets(email);
+                cin >> email;
                 break;
             }
             f.seekg(a - sizeof(c), ios::beg);
