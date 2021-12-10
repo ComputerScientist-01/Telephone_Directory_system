@@ -147,7 +147,7 @@ void Telephone::mod()
     }
     f.close();
 }
-void main()
+int main()
 {
     int ch;
     char choice;
@@ -194,4 +194,5 @@ void main()
         cin >> choice;
     } while (choice == 'y');
     cout << "\nGood bye";
+    return 0;
 }
