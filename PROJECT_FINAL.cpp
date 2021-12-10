@@ -6,10 +6,8 @@
 
 class Telephone
 {
-    char f_name[20],l_name[20], phone_no[20], email[25];
+    char f_name[20],l_name[20], phone_no[20], email[25];   
     
-    
-
 public:
     void disp();         //function to display the data
 
@@ -26,7 +24,6 @@ public:
     void mod();          //function to modify the data
 
 }c;//object of class Telephone is created as 'c' 
-
 void Telephone::get() //function to input the data
 {
     puts("\nEnter  first name :");
@@ -40,7 +37,6 @@ void Telephone::get() //function to input the data
     
     puts("\nEnter  email address:");
     gets(email);  
-
 }
 void Telephone::disp() //function to display the data
 {
