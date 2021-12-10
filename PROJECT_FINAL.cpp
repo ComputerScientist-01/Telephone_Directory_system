@@ -79,7 +79,7 @@ void Telephone::search() //function to search the data
     ifile.read((char *)&c, sizeof(c));
     while (ifile)
     {
-        if (strcmpi(m, f_name) == 0)
+        if (strcasecmp(m, f_name) == 0)
             disp();
         ifile.read((char *)&c, sizeof(c));
     }
@@ -98,7 +98,7 @@ void Telephone::del()
     ifile.read((char *)&c, sizeof(c));
     while (ifile)
     {
-        if (strcmpi(b, f_name))
+        if (strcasecmp(b, f_name))
             ofile.write((char *)&c, sizeof(c));
         ifile.read((char *)&c, sizeof(c));
     }
@@ -120,7 +120,7 @@ void Telephone::mod()
     int a = f.tellg();
     while (!f.eof())
     {
-        if (!strcmpi(d, f_name))
+        if (!strcasecmp(d, f_name))
         {
             puts("\nPress 1 to change  first name\nPress 2 to  change last name\nPress 3 to change phone_no \nPress 4 to change  email address");
             cin >> p;
