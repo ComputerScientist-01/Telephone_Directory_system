@@ -11,7 +11,6 @@ class Telephone
     
 
 public:
-
     void disp();         //function to display the data
 
     void get();          //function to input the data
